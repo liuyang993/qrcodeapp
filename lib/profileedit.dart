@@ -15,7 +15,7 @@ class Profileedit extends StatelessWidget {
         title: Text('Profile'),
       ),
       body: SafeArea(
-        top: false,
+        top: true,
         bottom: false,
         child: Container(
           decoration: BoxDecoration(
@@ -170,6 +170,217 @@ class Profileedit extends StatelessWidget {
                     ),
                   ),
                   // Form Text Phone
+                  Container(
+                    margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.indigo,
+                            width: 1.5,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Colors.indigo,
+                              width: 1.5,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                        ),
+                        labelText: 'Phone',
+                        // helperText: 'Your phone',
+                        labelStyle: TextStyle(
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
+
+                  Container(
+                    margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.indigo,
+                            width: 1.5,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Colors.indigo,
+                              width: 1.5,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                        ),
+                        labelText: 'Phone',
+                        // helperText: 'Your phone',
+                        labelStyle: TextStyle(
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.indigo,
+                            width: 1.5,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Colors.indigo,
+                              width: 1.5,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                        ),
+                        labelText: 'Phone',
+                        // helperText: 'Your phone',
+                        labelStyle: TextStyle(
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.indigo,
+                            width: 1.5,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Colors.indigo,
+                              width: 1.5,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                        ),
+                        labelText: 'Phone',
+                        // helperText: 'Your phone',
+                        labelStyle: TextStyle(
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.indigo,
+                            width: 1.5,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Colors.indigo,
+                              width: 1.5,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              15.0,
+                            ),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.phone,
+                          color: Colors.black,
+                        ),
+                        labelText: 'Phone',
+                        // helperText: 'Your phone',
+                        labelStyle: TextStyle(
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
                   Container(
                     margin: const EdgeInsets.only(top: 7.5, bottom: 7.5),
                     child: TextFormField(

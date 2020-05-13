@@ -19,7 +19,7 @@ class TraceList {
 
   static List<TraceList> tracelist = <TraceList>[
     TraceList(
-      imagePath: 'assets/hotel/hotel_1.png',
+      imagePath: 'img/hotel/hotel_1.png',
       titleTxt: 'Grand Royal Hotel',
       subTxt: 'Wembley, London',
       dist: 2.0,
@@ -28,7 +28,7 @@ class TraceList {
       perNight: 180,
     ),
     TraceList(
-      imagePath: 'assets/hotel/hotel_2.png',
+      imagePath: 'img/hotel/hotel_2.png',
       titleTxt: 'Queen Hotel',
       subTxt: 'Wembley, London',
       dist: 4.0,
@@ -37,7 +37,7 @@ class TraceList {
       perNight: 200,
     ),
     TraceList(
-      imagePath: 'assets/hotel/hotel_3.png',
+      imagePath: 'img/hotel/hotel_3.png',
       titleTxt: 'Grand Royal Hotel',
       subTxt: 'Wembley, London',
       dist: 3.0,
@@ -46,7 +46,7 @@ class TraceList {
       perNight: 60,
     ),
     TraceList(
-      imagePath: 'assets/hotel/hotel_4.png',
+      imagePath: 'img/hotel/hotel_4.png',
       titleTxt: 'Queen Hotel',
       subTxt: 'Wembley, London',
       dist: 7.0,
@@ -55,7 +55,7 @@ class TraceList {
       perNight: 170,
     ),
     TraceList(
-      imagePath: 'assets/hotel/hotel_5.png',
+      imagePath: 'img/hotel/hotel_5.png',
       titleTxt: 'Grand Royal Hotel',
       subTxt: 'Wembley, London',
       dist: 2.0,

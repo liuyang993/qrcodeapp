@@ -1,19 +1,19 @@
 
 import 'package:flutter/material.dart';
 
-import 'tracelistmodel.dart';
+import 'myscenemodel.dart';
 
-class HotelListView extends StatelessWidget {
-  const HotelListView(
+class SceneListView extends StatelessWidget {
+  const SceneListView(
       { //Key key,
-        this.hotelData,
+        this.sceneData,
 //        this.animationController,
 //        this.animation,
         this.callback});
       //: super(key: key);
 
   final VoidCallback callback;
-  final TraceList hotelData;
+  final SceneList sceneData;
 //  final AnimationController animationController;
 //  final Animation<dynamic> animation;
 
@@ -40,18 +40,22 @@ class HotelListView extends StatelessWidget {
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(30.0)),
                     child: Stack(
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            AspectRatio(
-                              aspectRatio: 2,
-                              child: Image.asset(
-                                hotelData.imagePath,
-                                fit: BoxFit.cover,
+                            //AspectRatio(
+                            //  aspectRatio: 2,
+                            //  child: Image.asset(
+                              Image.asset(
+                                            
+                                sceneData.barcodeImgPath,
+                                //fit: BoxFit.cover,
+                                height: 100,
+                                width: 100,
                               ),
-                            ),
+                            //),
                             Container(
                               color: Colors.white,
                               child: Row(
@@ -70,54 +74,54 @@ class HotelListView extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                           children: <Widget>[
                                             Text(
-                                              hotelData.titleTxt,
+                                              sceneData.sceneName,
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 22,
                                               ),
                                             ),
-                                            Row(
-                                              crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                              mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                              children: <Widget>[
-                                                Text(
-                                                  hotelData.subTxt,
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.grey
-                                                          .withOpacity(0.8)),
-                                                ),
-                                                const SizedBox(
-                                                  width: 4,
-                                                ),
-                                                Icon(
-                                                  Icons.ac_unit,
-                                                  size: 12,
-                                                  color: Colors.white,
-                                                ),
-                                                Expanded(
-                                                  child: Text(
-                                                    '${hotelData.dist.toStringAsFixed(1)} km to city',
-                                                    overflow:
-                                                    TextOverflow.ellipsis,
-                                                    style: TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.grey
-                                                            .withOpacity(0.8)),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
+                                            // Row(
+                                            //   crossAxisAlignment:
+                                            //   CrossAxisAlignment.center,
+                                            //   mainAxisAlignment:
+                                            //   MainAxisAlignment.start,
+                                            //   children: <Widget>[
+                                            //     Text(
+                                            //       sceneData.sceneDescription,
+                                            //       style: TextStyle(
+                                            //           fontSize: 14,
+                                            //           color: Colors.grey
+                                            //               .withOpacity(0.8)),
+                                            //     ),
+                                            //     const SizedBox(
+                                            //       width: 4,
+                                            //     ),
+                                            //     Icon(
+                                            //       Icons.ac_unit,
+                                            //       size: 12,
+                                            //       color: Colors.white,
+                                            //     ),
+                                            //     Expanded(
+                                            //       child: Text(
+                                            //         '${hotelData.dist.toStringAsFixed(1)} km to city',
+                                            //         overflow:
+                                            //         TextOverflow.ellipsis,
+                                            //         style: TextStyle(
+                                            //             fontSize: 14,
+                                            //             color: Colors.grey
+                                            //                 .withOpacity(0.8)),
+                                            //       ),
+                                            //     ),
+                                            //   ],
+                                            // ),
                                             Padding(
                                               padding:
                                               const EdgeInsets.only(top: 4),
                                               child: Row(
                                                 children: <Widget>[
                                                   Text(
-                                                    ' ${hotelData.reviews} Reviews',
+                                                    ' ${sceneData.reviewCounts} Reviews',
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.grey
@@ -131,33 +135,33 @@ class HotelListView extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.end,
-                                      children: <Widget>[
-                                        Text(
-                                          '\$${hotelData.perNight}',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 22,
-                                          ),
-                                        ),
-                                        Text(
-                                          '/per night',
-                                          style: TextStyle(
-                                              fontSize: 14,
-                                              color:
-                                              Colors.grey.withOpacity(0.8)),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                  // Padding(
+                                  //   padding: const EdgeInsets.only(
+                                  //       right: 16, top: 8),
+                                  //   child: Column(
+                                  //     mainAxisAlignment:
+                                  //     MainAxisAlignment.center,
+                                  //     crossAxisAlignment:
+                                  //     CrossAxisAlignment.end,
+                                  //     children: <Widget>[
+                                  //       Text(
+                                  //         '\$${hotelData.perNight}',
+                                  //         textAlign: TextAlign.left,
+                                  //         style: TextStyle(
+                                  //           fontWeight: FontWeight.w600,
+                                  //           fontSize: 22,
+                                  //         ),
+                                  //       ),
+                                  //       Text(
+                                  //         '/per night',
+                                  //         style: TextStyle(
+                                  //             fontSize: 14,
+                                  //             color:
+                                  //             Colors.grey.withOpacity(0.8)),
+                                  //       ),
+                                  //     ],
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),

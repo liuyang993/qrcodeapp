@@ -1,8 +1,15 @@
 import 'dart:async';
+//import 'dart:html';
 
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'myscenemodel.dart';
+import 'tracelistview.dart';  
+import 'scenelist.dart';
+import 'testscenelist.dart';
+
 
 class ScanScreen extends StatefulWidget {
   @override
@@ -11,6 +18,8 @@ class ScanScreen extends StatefulWidget {
 
 class _ScanState extends State<ScanScreen> {
   String barcode = "";
+
+  List<SceneList> sceneList = SceneList.scenelist;
 
   @override
   initState() {
@@ -21,32 +30,173 @@ class _ScanState extends State<ScanScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: new Text('QR Code Scanner'),
-        ),
-        body: new Center(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: RaisedButton(
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    splashColor: Colors.blueGrey,
-                    onPressed: scan,
-                    child: const Text('START CAMERA SCAN')
-                ),
-              )
-              ,
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Text(barcode, textAlign: TextAlign.center,),
-              )
-              ,
+          //title: new Text('QR Code Scanner'),
+          title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                  Image.asset(
+                 'img/loading_3.png',
+                  fit: BoxFit.contain,
+                  height: 32,
+              ),
+              Container(
+                  padding: const EdgeInsets.all(8.0), child: Text('Super Check In'))
             ],
           ),
-        ));
+        ),
+        body : SingleChildScrollView(
+          child : Column(children: <Widget>[
+        
+        Container(
+          color:Colors.white,
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                    'Personal Site',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      //fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      
+                    ),
+              ),
+              FlatButton.icon(
+                color: Colors.white,
+                icon: Icon(Icons.add), //`Icon` to display
+                label: Text('Add'), //`Text` to display
+                onPressed: () {
+
+                },
+              ),
+            ],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.green),
+            //color: Colors.black, 
+          ),
+          //color:Colors.white,
+          height: 200,
+          child: ListView.builder(
+          shrinkWrap: true, 
+          //itemCount: sceneList.length,
+          itemCount: 2,          
+          padding: const EdgeInsets.only(top: 8),
+          scrollDirection: Axis.vertical,
+          itemBuilder: (BuildContext context, int index) {
+            final int count =
+            sceneList.length > 10 ? 2 : 2;
+            //sceneList.length > 10 ? 10 : sceneList.length;
+            return TestSceneListView(
+              callback: () {},
+              sceneData: sceneList[index],
+            );
+          },
+        ), 
+
+        ),        
+
+        Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 10, top: 3, bottom: 1),
+        child: Container(
+          color:Colors.yellow,
+          height: 30,
+          child: RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.green,
+                    color: Colors.white,
+                    onPressed: (){},
+                    child: new Text("See more site"),
+                  ),
+
+
+        ),        
+        ),
+
+
+        Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 10, top: 20, bottom: 1),
+        child:       Container(
+          color:Colors.white,
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                    'Business Site',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      //fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      
+                    ),
+              ),
+              FlatButton.icon(
+                color: Colors.white,
+                icon: Icon(Icons.add), //`Icon` to display
+                label: Text('Add'), //`Text` to display
+                onPressed: () {
+
+                },
+              ),
+            ],
+          ),
+        ),
+        ),        
+
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.green),
+            //color: Colors.black, 
+          ),
+          //color:Colors.white,
+          height: 200,
+          child: ListView.builder(
+          shrinkWrap: true, 
+          //itemCount: sceneList.length,
+          itemCount: 2,          
+          padding: const EdgeInsets.only(top: 8),
+          scrollDirection: Axis.vertical,
+          itemBuilder: (BuildContext context, int index) {
+            final int count =
+            sceneList.length > 10 ? 2 : 2;
+            //sceneList.length > 10 ? 10 : sceneList.length;
+            return TestSceneListView(
+              callback: () {},
+              sceneData: sceneList[index],
+            );
+          },
+        ), 
+
+        ),        
+        Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 10, top: 3, bottom: 1),
+        child: Container(
+          color:Colors.yellow,
+          height: 30,
+          child: RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.green,
+                    color: Colors.white,
+                    onPressed: (){},
+                    child: new Text("See more site"),
+                  ),
+
+
+        ),        
+        ),
+
+        ], 
+      ),
+        ),
+
+        );
   }
 
   Future scan() async {

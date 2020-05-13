@@ -4,7 +4,7 @@ import 'profile.dart';
 import 'barcodescan.dart';
 import 'realscan.dart';
 import 'app_scene.dart';
-void main() => runApp(AppScene());
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
