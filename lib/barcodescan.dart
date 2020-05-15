@@ -9,6 +9,8 @@ import 'myscenemodel.dart';
 import 'tracelistview.dart';  
 import 'scenelist.dart';
 import 'testscenelist.dart';
+import 'package:flutter/cupertino.dart';
+import 'addpersonalsite.dart';
 
 
 class ScanScreen extends StatefulWidget {
@@ -34,15 +36,16 @@ class _ScanState extends State<ScanScreen> {
           title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                  Image.asset(
-                 'img/loading_3.png',
-                  fit: BoxFit.contain,
-                  height: 32,
-              ),
+              //     Image.asset(
+              //    'img/loading_3.png',
+              //     fit: BoxFit.contain,
+              //     height: 32,
+              // ),
               Container(
-                  padding: const EdgeInsets.all(8.0), child: Text('Super Check In'))
+                  padding: const EdgeInsets.all(8.0), child: Text('High5'))
             ],
           ),
+          backgroundColor: Colors.green,
         ),
         body : SingleChildScrollView(
           child : Column(children: <Widget>[
@@ -66,9 +69,7 @@ class _ScanState extends State<ScanScreen> {
                 color: Colors.white,
                 icon: Icon(Icons.add), //`Icon` to display
                 label: Text('Add'), //`Text` to display
-                onPressed: () {
-
-                },
+                onPressed: _goAddPersonalSite,
               ),
             ],
           ),
@@ -218,4 +219,21 @@ class _ScanState extends State<ScanScreen> {
       setState(() => this.barcode = 'Unknown error: $e');
     }
   }
+
+
+    void _goAddPersonalSite() {
+    // Navigator.of(context).pushAndRemoveUntil(
+    //     CupertinoPageRoute(builder: (BuildContext context) => AddPersonalSite()),
+    //     (Route<dynamic> route) => false);
+
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AddPersonalSite()),
+      );
+
+
+    }
+
+
 }

@@ -4,6 +4,7 @@ import 'profile.dart';
 import 'barcodescan.dart';
 import 'realscan.dart';
 import 'app_scene.dart';
+import 'guidescene.dart';
 void main() => runApp(AppScene());
 
 class MyApp extends StatelessWidget {
