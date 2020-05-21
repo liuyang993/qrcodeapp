@@ -4,6 +4,7 @@ import 'profile.dart';
 import 'barcodescan.dart';
 import 'realscan.dart';
 import 'app_scene.dart';
+import 'locationmain.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -89,7 +90,8 @@ class _MyHomePageState extends State<MyHomePage> {
             //Profile(),
             ScanScreen(),
             RealScan(),
-            Profile(),
+            //Profile(),
+            locationmain(),
           ],
           index: _tabIndex,
         ),
